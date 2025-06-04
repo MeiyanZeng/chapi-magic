@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapi 云宠祝福页</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: #e0f7fa;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      color: #5c6bc0;
+    }
+    .cloudpet {
+      width: 200px;
+      margin: 1em auto;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #81d4fa;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #4fc3f7;
+    }
+    .message {
+      margin-top: 1.5em;
+      font-size: 1.2em;
+      color: #006064;
+    }
+  </style>
+</head>
+<body>
+  <h1>☁️ 欢迎来到 Chapi 云宠乐园！</h1>
+  <img src="https://i.imgur.com/3ZQ3ZPl.png" alt="Cloud Pet" class="cloudpet"/>
+  <div>
+    <button class="btn" onclick="showBlessing()">点击接收每日祝福 ✨</button>
+  </div>
+  <div class="message" id="blessingMsg"></div>
+
+  <script>
+    const blessings = [
+      "愿你今天像云朵一样轻盈自在 ☁️",
+      "阳光刚好，温柔正好，适合出门晒晒心情 🌞",
+      "你是最可爱的小锤子，今天也被温柔接住啦！🔨",
+      "每天都值得被可爱的事情包围 🐾",
+      "愿你内心柔软，世界也柔软地对你 🤍"
+    ];
+    function showBlessing() {
+      const msg = blessings[Math.floor(Math.random() * blessings.length)];
+      document.getElementById("blessingMsg").innerText = msg;
+    }
+  </script>
+</body>
+</html>
